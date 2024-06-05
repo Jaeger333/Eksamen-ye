@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column; /* Ensure header is at the top */
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.form-container {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin: 10px;
+    margin-top: 80px; /* Adjust margin to accommodate the header */
+}
+
+.form-container form {
+    font-size: 18px; /* Increase the font size */
+}
+
+.message-box {
+    width: 250px; /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin as needed */
+}
+
+.message-box h2 {
+    margin-top: 0;
+}
+
+.message-box p {
+    margin-bottom: 10px;
+}
+
+.message-box button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.message-box button:hover {
+    background-color: #0056b3;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%; /* Make header span the entire width */
+    position: fixed; /* Fixed position */
+    top: 0; /* Position at the top */
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+        <h1>Admin</h1>
+    </header>
+
+    <table id="usersTable">
+        <thead id="usersthead">
+            <tr>
+                <th colspan="6">
+                    <form id="editForm" action='/updateUser' method="POST">
+                        <input type="hidden" name="userID">
+                        <input type="text" name="firstname" placeholder="First Name">
+                        <input type="text" name="lastname" placeholder="Last Name">
+                        <input type="text" name="username" placeholder="Username">
+                        <input type="text" name="password" placeholder="Password">
+                        <input type="text" name="mobile" placeholder="Mobile">
+                        <select name="role"></select>
+                        <button type="submit">Save</button>
+                    </form>
+                </th>
+            </tr>
+            <tr>
+                <th>Fornavn</th>
+                <th>Etternavn</th>
+                <th>Brukernavn</th>
+                <th>Mobile</th>
+                <th>Rolle</th>
+            </tr>
+        </thead>
+        <tbody id="userstbody"></tbody>
+    </table>
+
+    <br>
+
+    <h2>Registrer ny bruker:</h2>
+    <form id = "registerForm" action='/register' method="POST">
+        <input type="hidden" name="username" required>
+
+        <br>
+        <label for="firstname">Fornavn:</label>
+        <input type="text" name="firstname" required>
+        <br>
+        <label for="lastname">Etternavn:</label>
+        <input type="text" name="lastname" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <br>
+        <label for="mobile">tlf:</label>
+        <input type="text" name="mobile" required>
+        <br>
+        <label for="role">Rolle:</label>
+        <select id="role" name="role" required></select>
+
+        <br>
+        <button type="submit" name="register">Registrer</button>
+    </form>
+
+    <br>
+
+    <h2>Slett kunders solceller</h2>
+
+    <form id="deleteUserSolcelleForm" action="/deleteUserSolcelle" method="POST">
+        <label for="delete">Slett solcelle:</label>
+        <select id="customerSelect" name="customerId"></select>
+        <select id="customerSolcellerSelect" name="solcelleId"></select>
+        <button type="submit" name="delete">Slett</button>
+    </form>
+
+    <table id="showUserSolcellerTable">
+        <thead id="showusersolcellerthead">
+            <tr>
+                <th>Navn</th>
+                <th>Beskrivelse</th>
+                <th>Modell</th>
+                <th>År</th>
+                <th>Produksjon</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="showusersolcellertbody"></tbody>
+    </table>
+    <br>
+
+    <br>
+
+    <button onclick="location.href='loesninger.html'">Gå til løsninger</button>
+    <button onclick="location.href='salgmont.html'">Gå til Salg/Montering</button>
+
+    <form id="logoutForm" action="/logout" method="GET">
+        <button type="submit" id="btnLogout">Logg ut</button>
+    </form>
+
+    <script src="admin.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

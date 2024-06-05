@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+</head>
+<body>
+    <header>
+        <h1>Dine solceller</h1>
+    </header>
+
+    <div id="solcellerDiv"></div>
+
+    <table id="ownSolcellerTable">
+        <thead id="usersthead">
+            <tr>
+                <th>Navn:</th>
+                <th>Beskrivelse:</th>
+                <th>Modell:</th>
+                <th>År:</th>
+                <th>Produksjon:</th>
+                <th>Type:</th>
+            </tr>
+        </thead>
+        <tbody id="ownsolcellertbody"></tbody>
+    </table>
+
+    <form id="logoutForm" action="/logout" method="GET">
+        <button type="submit" id="btnLogout">Logg ut</button>
+    </form>
+
+    <button onclick="location.href='loesninger.html'">Gå til løsninger</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Våre solceller</title>
+    <link rel="stylesheet" type="text/css" href="/css/loesninger.css">
+
+</head>
+<body>
+
+    <header>
+        <h1>Typer solceller</h1>
+    </header>
+    
+
+
+    <div class="container" id="testDiv">
+        <!-- Dynamic content will be populated here -->
+    </div>
+
+    <br>
+
+    <h1>Solcellepaneler</h1>
+    <br>
+
+    <input type="text" id="searchInput" onkeyup="search()" placeholder="Søk etter artikkel">
+    <br>
+
+    <table id="showSolcellerTable">
+        <thead id="showsolcellerthead">
+            <tr>
+                <th>Navn</th>
+                <th>Beskrivelse</th>
+                <th>Modell</th>
+                <th>År</th>
+                <th>Produksjon</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="showsolcellertbody"></tbody>
+    </table>
+    <br>
+    
+    <button onclick="location.href='login.html'">Gå til innlogging</button>
+    
+    <form id="logoutForm" action="/logout" method="GET">
+        <button type="submit" id="btnLogout">Logg ut</button>
+    </form>
+
+    <script src="script.js"></script>
+    </body>
+</html>

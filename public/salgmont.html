@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Registrer ny solcelle:</h2>
+    <form id = "registerSolcelleForm" action='/registerSolcelle' method="POST">
+
+        <label for="name">Navn:</label>
+        <input type="text" name="name" required>
+        <br>
+        <label for="description">Beskrivelse:</label>
+        <input type="text" name="description" required>
+        <br>
+        <label for="model">Modell:</label>
+        <input type="text" name="model" required>
+        <br>
+        <label for="built">År:</label>
+        <input type="number" name="built" required>
+        <br>
+        <label for="output">Produksjon:</label>
+        <input type="number" name="output" required>
+        <br>
+        <label for="type">Type:</label>
+        <select id="type" name="type" required></select>
+
+        <br>
+        <button type="submit" name="register">Registrer</button>
+    </form>
+    <br>
+
+    <h2>Oppdater/rediger en solcelle</h2>
+    <table id="solcellerTable">
+        <thead id="solcellerthead">
+            <tr>
+                <th colspan="6">
+                    <form id="solcellerEditForm" action='/updateSolcelle' method="POST">
+                        <input type="hidden" name="solcelleID">
+                        <input type="text" name="name" placeholder="Navn">
+                        <input type="text" name="description" placeholder="Beskrivelse">
+                        <input type="text" name="model" placeholder="Modell">
+                        <input type="number" name="built" placeholder="År">
+                        <input type="number" name="output" placeholder="Produksjon">
+                        <select name="type"></select>
+                        <button type="submit">Save</button>
+                    </form>
+                </th>
+            </tr>
+            <tr>
+                <th>Navn</th>
+                <th>Beskrivelse</th>
+                <th>Modell</th>
+                <th>År</th>
+                <th>Produksjon</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="solcellertbody"></tbody>
+    </table>
+
+
+    <br>
+
+    <form id="deleteSolcelleForm" action="/deleteSolcelle" method="POST">
+        <label for="delete">Slett solcelle:</label>
+        <select id="solcellerSelect" name="id"></select>
+        <button type="submit" name="delete">Slett</button>
+    </form>
+
+    <br>
+
+    <button onclick="location.href='loesninger.html'">Gå til løsninger</button>
+
+    <br>
+    
+    <form id="logoutForm" action="/logout" method="GET">
+        <button type="submit" id="btnLogout">Logg ut</button>
+    </form>
+
+    
+    <script src="salgmont.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
